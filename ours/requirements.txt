@@ -1,0 +1,6 @@
+beautifulsoup4
+gitpython
+openai>=1.93.0
+pydriller>=2.8
+spacy>=3.8.7
+tqdm>=4.67.1

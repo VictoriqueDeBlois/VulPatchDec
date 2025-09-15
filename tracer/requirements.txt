@@ -1,0 +1,14 @@
+numpy
+pyyaml
+tqdm
+requests
+beautifulsoup4
+pandas
+urllib3
+selenium
+mysql-connector-python
+networkx
+matplotlib
+pydriller
+wget
+Levenshtein

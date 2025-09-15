@@ -1,0 +1,7 @@
+openprompt
+numpy
+torch
+pandas
+tqdm
+transformers
+scikit-learn
