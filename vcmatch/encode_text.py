@@ -237,8 +237,8 @@ def main():
     torch.manual_seed(42)
     np.random.seed(42)
 
-    train_df = pd.read_json('/home/xuhaoran/pycharm/Dual/data/final_data/train.jsonl', lines=True)
-    val_df = pd.read_json('/home/xuhaoran/pycharm/Dual/data/final_data/val.jsonl', lines=True)
+    train_df = pd.read_json('../data/train.jsonl', lines=True)
+    val_df = pd.read_json('../data/val.jsonl', lines=True)
 
     train_texts1 = train_df['desc_cve']
     train_texts2 = train_df['commit_mess']
@@ -302,8 +302,8 @@ def main():
 
 
 def encode():
-    # train_df = pd.read_json('/home/xuhaoran/pycharm/Dual/data/final_data/train.jsonl', lines=True)
-    test_df = pd.read_feather('/home/xuhaoran/pycharm/Dual/data/final_data/new_test.feather')
+    # train_df = pd.read_json('../data/train.jsonl', lines=True)
+    test_df = pd.read_feather('../data/test.feather')
 
     model = BertTextEncoder()
     model.load_state_dict(torch.load('bert_text_encoder.pth'))

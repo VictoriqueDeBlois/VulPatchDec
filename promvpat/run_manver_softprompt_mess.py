@@ -299,7 +299,7 @@ def main():
     logger.info("logger finish...")
 
 def model_test(args, dataset, mytemplate, use_cuda):
-    prompt_model = torch.load('/home/xuhaoran/pycharm/Dual/model/run_manver_softprompt_mess.pth')
+    prompt_model = torch.load('./model/run_manver_softprompt_mess.pth')
 
     if use_cuda:
         prompt_model = prompt_model.cuda()

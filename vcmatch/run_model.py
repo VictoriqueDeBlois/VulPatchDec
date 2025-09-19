@@ -15,8 +15,8 @@ if __name__ == '__main__':
     vuln_cols = ['vuln_emb' + str(i) for i in range(32)]
     cmt_cols = ['cmt_emb' + str(i) for i in range(32)]
 
-    test_df = pd.read_feather('/home/xuhaoran/pycharm/Dual/data/final_data/new_test.feather')
-    train_df = pd.read_json('/home/xuhaoran/pycharm/Dual/data/final_data/train.jsonl', lines=True)
+    test_df = pd.read_feather('../data/test.feather')
+    train_df = pd.read_json('../data/train.jsonl', lines=True)
 
     test_df = test_df.rename(columns={'commit_id': 'commit'})
 
