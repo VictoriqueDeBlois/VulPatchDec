@@ -278,5 +278,5 @@ def identify_null_file(file_path):
 
 
 if __name__ == '__main__':
-    patch_frequency =  extract_commitID(f'/data/zy/pythonProject/CVEKnowledgeMap/answer/CVE-2017-7666/round1',f'answer550.txt',"CVE-2017-7666")
+    patch_frequency =  extract_commitID(f'../pythonProject/CVEKnowledgeMap/answer/CVE-2017-7666/round1',f'answer550.txt',"CVE-2017-7666")
     get_most_common_patch_number(patch_frequency,"CVE-2017-7666")

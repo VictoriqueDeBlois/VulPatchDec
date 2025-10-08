@@ -201,7 +201,7 @@ class FunctionSearcher(Base):
 class Antlr4Searcher(Base):
     def __init__(self, logger=None, log_path=None):
         super().__init__(logger=logger, log_path=log_path)
-        self.java_path = '/home/xuhaoran/program/jdk-20.0.2/bin/java'
+        self.java_path = 'java'
         self.jar_path = os.path.join(self.base_path, 'java', 'antlrparser-1.0-jar-with-dependencies.jar')
 
     def call_java_method(self, lang, filename, *args):

@@ -75,7 +75,7 @@ def compare(cve_list):
             owner = m.group(1).lower()
             repo = m.group(2).lower()
             # todo :先找Vul下的git目录
-            Vul_git = f'/data/zy/VulnerCollector/git'
+            Vul_git = f'../VulnerCollector/git'
             all_commits = get_fixed_version_commits(owner, repo, fixed_version, f'{Vul_git}{owner}/{repo}', 0)
             # if all_commits is None:
             #     break

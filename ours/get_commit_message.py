@@ -11,11 +11,11 @@ import config
 from util.github_util import get_fixed_version_commits, remove_csv_files, get_all_commits
 from  util.vera_util import get_vera_found
 
-main_path = '/data/zy/pythonProject/CVEKnowledgeMap'
+main_path = '...'
 
 import git
 
-git.Git.GIT_PYTHON_GIT_EXECUTABLE = '/home/xuhaoran/.conda/envs/torch/bin/git'
+git.Git.GIT_PYTHON_GIT_EXECUTABLE = '...'
 
 class CloneProgress(git.RemoteProgress):
     def __init__(self, name):
@@ -38,7 +38,7 @@ class CloneProgress(git.RemoteProgress):
 #     for cve in keys1:
 #         version_commits = {}
 #
-#         with open(f'/data/zy/pythonProject/CVEKnowledgeMap/resource/vera.csv', "r") as f:
+#         with open(f'.../resource/vera.csv', "r") as f:
 #             reader = csv.reader(f)
 #             for row in reader:
 #                 if cve == row[0]:
@@ -156,7 +156,7 @@ def get_all_commits_message(cves):
         repo = first_row[1]
         get_all_commits(owner, repo, f'{config.GIT_REPO_PATH}{owner}/{repo}',
                                   folder)
-        repo_config = open(f'/data/zy/pythonProject/CVEKnowledgeMap/all_commits/{folder}/repo_config.csv', "w")
+        repo_config = open(f'.../all_commits/{folder}/repo_config.csv', "w")
         writer = csv.writer(repo_config)
         writer.writerow([owner, repo])
 
@@ -189,7 +189,7 @@ if __name__ == '__main__':
     # # for cve in keys1:
     # #     if cve not in output and 'CVE' in cve:
     # #         cves.append(cve)
-    with open(f'/data/zy/pythonProject/CVEKnowledgeMap/resource/dataset1.txt', "r") as f:
+    with open(f'.../resource/dataset1.txt', "r") as f:
         cves = f.readlines()
         cves = [x.strip() for x in cves]
     data1 = set(cves)

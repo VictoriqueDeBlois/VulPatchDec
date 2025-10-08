@@ -42,10 +42,10 @@ def datasetAnalysis():
     for key in year_map:
         print(key, year_map[key])
 def veraAnalysisi():
-    vera = os.listdir('/data/zy/VulnerCollector/vera/result')
+    vera = os.listdir('../VulnerCollector/vera/result')
 def get_new_data():
-    vera = os.listdir('/data/zy/VulnerCollector/vera/result')
-    snyk = os.listdir('/data/zy/VulnerCollector/snyk/search_page')
+    vera = os.listdir('../VulnerCollector/vera/result')
+    snyk = os.listdir('../VulnerCollector/snyk/search_page')
     data = {}
     with open('../vera.csv', 'r') as f:
         reader = csv.reader(f)
@@ -76,7 +76,7 @@ def get_new_data():
     #     if int(year)<2020:
     #         continue
     #
-    #     value = get_vera_found('/data/zy/VulnerCollector/vera/result/'+url)
+    #     value = get_vera_found('../VulnerCollector/vera/result/'+url)
     #     if value.__len__()!=0:
     #         data[cve] = value
     # with open('../vera.csv', 'w') as f:

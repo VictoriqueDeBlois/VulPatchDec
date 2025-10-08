@@ -13,8 +13,8 @@ from pre_process.github_lang import get_repo_main_language
 from util.tool import longestCommonSubstr
 from util.cve_parser import get_cve_list, get_cve_description_cpe, get_cpe_by_cve
 
-lang_dir = "/data/zy/pythonProject/data/"
-cve_dir = "/data/zy/VulnerCollector/data/CVE/DataSet-NVD"
+lang_dir = "../pythonProject/data/"
+cve_dir = "../VulnerCollector/data/CVE/DataSet-NVD"
 
 
 # 定义一个函数，用于判断一个词是否是代词

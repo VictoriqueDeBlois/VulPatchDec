@@ -1,4 +1,4 @@
-# 定义一个函数，用于根据CVE编号获取/data/zy/pythonProject/cve/cve_lcs目录下同名 cveid.csv文件，如果没有则输出"closed “，有则获取第一列数据，并返回即可
+# 定义一个函数，用于根据CVE编号获取../pythonProject/cve/cve_lcs目录下同名 cveid.csv文件，如果没有则输出"closed “，有则获取第一列数据，并返回即可
 import json
 import re
 

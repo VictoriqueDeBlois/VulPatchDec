@@ -79,7 +79,7 @@ def frequency_commits_accuracy_v2(cves):
             continue
         map = {}
 
-        with open(f'/data/zy/pythonProject/CVEKnowledgeMap/resource/vera.csv', "r") as f:
+        with open(f'../pythonProject/CVEKnowledgeMap/resource/vera.csv', "r") as f:
             reader = csv.reader(f)
             for row in reader:
                 if cve == row[0]:
@@ -477,7 +477,7 @@ def VulAccuracy_part4(cves, map):
     correct_count = 0
     for cve in cves:
         dict = []
-        pkl_file = os.path.join('/data/zy/pythonProject/CVEKnowledgeMap/temp_pipline', cve, 'answer_prompt.pkl')
+        pkl_file = os.path.join('../pythonProject/CVEKnowledgeMap/temp_pipline', cve, 'answer_prompt.pkl')
         if not os.path.exists(pkl_file):
             print(f'{cve} not found')
             continue
@@ -607,7 +607,7 @@ if __name__ == "__main__":
     # with open(f'{config.RESOURCE_PATH}dataset2.txt', 'r') as f:
     #     cves = f.readlines()
     #     cves = [x.strip() for x in cves]
-    # answers = os.listdir('/data/zy/pythonProject/CVEKnowledgeMap/answer')
+    # answers = os.listdir('../pythonProject/CVEKnowledgeMap/answer')
     # # with open(f'{config.RESOURCE_PATH}/dataset1.txt', 'r') as f:
     # #     cves = f.readlines()
     # #     cves = [x.strip() for x in cves]
@@ -632,7 +632,7 @@ if __name__ == "__main__":
                 bench[key] = [value]
 
     # 读取vera.csv
-    with open(f'/data/zy/pythonProject/CVEKnowledgeMap/resource/vera.csv', "r") as f:
+    with open(f'../pythonProject/CVEKnowledgeMap/resource/vera.csv', "r") as f:
         reader = csv.reader(f)
         for row in reader:
             key = row[0]
@@ -644,7 +644,7 @@ if __name__ == "__main__":
             else:
                 bench[key] = [value]
 
-    with open('/data/zy/pythonProject/CVEKnowledgeMap/resource/brench.json', "w", encoding='utf-8') as fp:
+    with open('../pythonProject/CVEKnowledgeMap/resource/brench.json', "w", encoding='utf-8') as fp:
         json.dump(bench, fp, indent=4)
 
     # TRACER_COMMIT__META_PATH = os.listdir(config.TRACER_COMMIT__META_PATH)

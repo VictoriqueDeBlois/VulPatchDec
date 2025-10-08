@@ -4,7 +4,7 @@ import re
 
 import config
 from  util.vera_util import get_vera_found
-not_include = os.listdir("/data/zy/pythonProject/CVEKnowledgeMap/cve/compare_answer")
+not_include = os.listdir("../pythonProject/CVEKnowledgeMap/cve/compare_answer")
 count_has = 0
 cout_not = 0
 res = []
@@ -32,7 +32,7 @@ for file in not_include:
     hashs = set()
     for row in rows:
         hashs.add(row[0])
-    commits_csv = open(f'/data/zy/pythonProject/CVEKnowledgeMap/result_same_50/{cve}/commit1.csv', "r")
+    commits_csv = open(f'../pythonProject/CVEKnowledgeMap/result_same_50/{cve}/commit1.csv', "r")
     reader = csv.reader(commits_csv)
     answer_commits = set()
     for row in reader:

@@ -21,19 +21,19 @@ OUTPUT_PATH = current_dir + '/output/'
 
 TEST_PATH = current_dir + '/test/'
 
-CVE_SETS_PKL = '/data/zy/pythonProject/CVEKnowledgeMap/cves_set.pkl'
-CVE_SETS_TEST_PATH = '/data/zy/pythonProject/CVEKnowledgeMap/test_311/'
-DBA_CVEID_PATH = '/data/zy/VulnerCollector/data/dataset/breadth_dataset-DBA_CVEIDs_withPatches.json'
+CVE_SETS_PKL = '../pythonProject/CVEKnowledgeMap/cves_set.pkl'
+CVE_SETS_TEST_PATH = '../pythonProject/CVEKnowledgeMap/test_311/'
+DBA_CVEID_PATH = './data/dataset/breadth_dataset-DBA_CVEIDs_withPatches.json'
 
-DBB_CVEID_PATH = '/data/zy/VulnerCollector/data/dataset/breadth_dataset-DBB_CVEIDs_withPatches.json'
-DBA_CVEID_PATH = '/data/zy/VulnerCollector/data/dataset/breadth_dataset-DBA_CVEIDs_withPatches.json'
-VERA_PATH = "/data/xuhaoran/pycharm/testvul/vera/detail/"
+DBB_CVEID_PATH = './data/dataset/breadth_dataset-DBB_CVEIDs_withPatches.json'
+DBA_CVEID_PATH = './data/dataset/breadth_dataset-DBA_CVEIDs_withPatches.json'
+VERA_PATH = "../testvul/vera/detail/"
 CVE_RESULT_PATH = CURRENT_DIR + 'cve_old/'
 TRACCER_NOT_MATHCED_PATH = CURRENT_DIR + 'cve/vera_commit_not_match/'
-TRACER_COMMIT_PATH = '/data/zy/VulnerCollector/vdb_output/commit/'
-GIT_REPO_PATH = '/data/zy/VulnerCollector/git/'
-SNYK_JSON_PATH = '/data/xuhaoran/pycharm/testvul/snyk/search'
-CVE_DATA_PATH = '/data/zy/VulnerCollector/data/CVE/DataSet-NVD/'
+TRACER_COMMIT_PATH = './vdb_output/commit/'
+GIT_REPO_PATH = './git/'
+SNYK_JSON_PATH = '../testvul/snyk/search'
+CVE_DATA_PATH = './data/CVE/DataSet-NVD/'
 LOG_PATH = CURRENT_DIR + 'log/'
 ANSWER_PATH = CURRENT_DIR + 'answer/'
 token = "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"

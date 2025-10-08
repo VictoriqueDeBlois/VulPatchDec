@@ -23,7 +23,7 @@ def read_the_answer_by_index_accuracy(cves,index,round,map):
     for folder in cves:
         #得到answer文件夹下的所有answer文件
         folder_path = os.path.join(answer_dir, folder)
-        # folder_path = "/data/zy/pythonProject/CVEKnowledgeMap/answer/CVE-2017-7666"
+        # folder_path = "../pythonProject/CVEKnowledgeMap/answer/CVE-2017-7666"
         cve = folder
         if os.path.isdir(folder_path):
             # Iterate over each file in the folder
@@ -85,7 +85,7 @@ def read_the_answer_by_index_recall(cves,index,round,map):
     for folder in cves:
         #得到answer文件夹下的所有answer文件
         folder_path = os.path.join(answer_dir, folder)
-        # folder_path = "/data/zy/pythonProject/CVEKnowledgeMap/answer/CVE-2017-7666"
+        # folder_path = "../pythonProject/CVEKnowledgeMap/answer/CVE-2017-7666"
         cve = folder
         if os.path.isdir(folder_path):
             # Iterate over each file in the folder
@@ -142,7 +142,7 @@ def read_the_answer(folder):
 # Iterate over each folder in the answer directory
     print(folder)
     folder_path = os.path.join(answer_dir, folder)
-    # folder_path = "/data/zy/pythonProject/CVEKnowledgeMap/answer/CVE-2017-7666"
+    # folder_path = "../pythonProject/CVEKnowledgeMap/answer/CVE-2017-7666"
     cve = folder
     if os.path.isdir(folder_path):
         # Iterate over each file in the folder

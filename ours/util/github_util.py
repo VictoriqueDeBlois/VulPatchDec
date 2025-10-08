@@ -164,8 +164,8 @@ def get_all_commits_mes(dir,CVE):
     os.chdir(dir)
     print(CVE , dir)
     os.system("git log --pretty=format:'%H,%h,%s,%b' > all-commits.csv")
-    os.mkdir(f'/data/zy/pythonProject/CVEKnowledgeMap/all_commits/{CVE}')
-    shutil.copy("all-commits.csv", f'/data/zy/pythonProject/CVEKnowledgeMap/all_commits/{CVE}')
+    os.mkdir(f'../pythonProject/CVEKnowledgeMap/all_commits/{CVE}')
+    shutil.copy("all-commits.csv", f'../pythonProject/CVEKnowledgeMap/all_commits/{CVE}')
     os.chdir(config.PROJECT_ROOT)
 
 

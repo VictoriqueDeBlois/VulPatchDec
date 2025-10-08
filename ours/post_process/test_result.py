@@ -2,7 +2,7 @@
 # import re
 #
 # # 定义要搜索的目录
-# directory = '/data/zy/pythonProject/CVEKnowledgeMap/answer/CVE-2014-3248/'
+# directory = '../pythonProject/CVEKnowledgeMap/answer/CVE-2014-3248/'
 #
 # # 使用glob模块查找所有以'answer'开头的文件
 # file_list = glob.glob(f'{directory}answer*')

@@ -251,10 +251,10 @@ cve_url_not_found = {}
 
 
 def get_time_csv(dir_path):
-    find_cves = os.listdir("/data/zy/VulnerCollector/vdb_output/commit")
+    find_cves = os.listdir("../VulnerCollector/vdb_output/commit")
 
     # 使用os.listdir()函数，获取目录下的所有文件名
-    depth_dataset = csv.reader(open("/data/zy/pythonProject/CVEKnowledgeMap/depth_dataset.csv", "r"))
+    depth_dataset = csv.reader(open("../pythonProject/CVEKnowledgeMap/depth_dataset.csv", "r"))
     depth_cveids = []
 
     for row in depth_dataset:
@@ -291,7 +291,7 @@ def get_time_csv(dir_path):
                 span = get_git_url_span(commit_date, url_max_date_format[0], url_max_date_format[1])
                 if span < 0:
                     print(commit_date)
-                    output_file = open(f'/data/zy/VulnerCollector/cve/min_span/{cve_id}.csv', "a+")
+                    output_file = open(f'../VulnerCollector/cve/min_span/{cve_id}.csv', "a+")
                     output_writer = csv.writer(output_file)
                     output_writer.writerow([commit_date, url_max_date_format[0], span])
 
@@ -299,7 +299,7 @@ def get_time_csv(dir_path):
 
 
 def read_commit_file_date(cve_id):
-    with open(f'/data/zy/VulnerCollector/vdb_output/commit/{cve_id}.txt', "r") as f:
+    with open(f'../VulnerCollector/vdb_output/commit/{cve_id}.txt', "r") as f:
         content = f.read()
         dates = []
         for line in content.split("\n"):
@@ -316,7 +316,7 @@ def read_commit_file_date(cve_id):
 
 
 # def get_time_txt(dir_path):
-#     exist = os.listdir("/data/zy/VulnerCollector/cve/min_span")
+#     exist = os.listdir("../VulnerCollector/cve/min_span")
 #     # 使用os.listdir()函数，获取目录下的所有文件名
 #     for file_name in os.listdir(dir_path):
 #         # 如果文件名以.txt结尾，添加到列表中
@@ -326,7 +326,7 @@ def read_commit_file_date(cve_id):
 #             file_path = os.path.join(dir_path, file_name)
 #             nvd_time = None
 #
-#             with open("/data/zy/VulnerCollector/pipeline/pipe0/" + file_name.replace(".txt", ".pkl"),
+#             with open("../VulnerCollector/pipeline/pipe0/" + file_name.replace(".txt", ".pkl"),
 #                       "rb") as f:
 #                 # 使用pickle模块的load函数，从文件中读取Python对象
 #                 cve_patches_obj = pickle.load(f)
@@ -368,7 +368,7 @@ def get_max_url_time(cveid, urls, nvd_time):
     min_span = 100000
     cve_url_not = []
     global count
-    intermediate_file = open(f'/data/zy/VulnerCollector/cve/pipeline/{cveid}.pkl', "wb")
+    intermediate_file = open(f'../VulnerCollector/cve/pipeline/{cveid}.pkl', "wb")
     url_date = []
     max_time = ""
     for url in urls:
@@ -436,8 +436,8 @@ def get_max_url_time(cveid, urls, nvd_time):
     return max_time
 
 
-# txt_path = "/data/zy/VulnerCollector/data/reference_location"
-csv_path = "/data/zy/VulnerCollector/data/reference_location"
+# txt_path = "../VulnerCollector/data/reference_location"
+csv_path = "../VulnerCollector/data/reference_location"
 # get_time_txt(txt_path)
 get_time_csv(csv_path)
 # 保存cve_url_not_found

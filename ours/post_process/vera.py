@@ -7,7 +7,7 @@ import config
 from util.vera_util import get_vera_found
 
 def get_cve_list():
-    with open("/data/zy/VulnerCollector/data/dataset/breadth_dataset-DBB_CVEIDs_withPatches.json", "r") as f:
+    with open("../VulnerCollector/data/dataset/breadth_dataset-DBB_CVEIDs_withPatches.json", "r") as f:
         data1 = json.load(f)
         f.close()
     # 获取字典键并存储在一个列表中
@@ -22,7 +22,7 @@ def get_cve_list():
 
 if __name__ == "__main__":
     # cve_list = get_cve_list()
-    cve_list = os.listdir("/data/zy/pythonProject/CVEKnowledgeMap/answer")
+    cve_list = os.listdir("../pythonProject/CVEKnowledgeMap/answer")
     vera_count = 0
     for cve in cve_list:
         print(cve)
@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
                 if hash not in answer_commits:
                     tag =False
-                    with open(f'/data/zy/pythonProject/CVEKnowledgeMap/cve/compare_answer/{cve}.csv', 'a+') as f:
+                    with open(f'../pythonProject/CVEKnowledgeMap/cve/compare_answer/{cve}.csv', 'a+') as f:
                         writer = csv.writer(f)
                         writer.writerow([fixed_version, commit])
                         f.close()

@@ -16,7 +16,7 @@ openai.api_key = "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"
 
 
 def make_prompt(cveid, description, commits, patch_commits_messages, cve_issue, cve_pr):
-    example_file = open(os.path.join('/data/zy/pythonProject/CVEKnowledgeMap/example_prompt'), "r")
+    example_file = open(os.path.join('../pythonProject/CVEKnowledgeMap/example_prompt'), "r")
     example_prompt = example_file.read()
     example_file.close()
     prompt = (
@@ -59,7 +59,7 @@ def get_patch_commits(file, folder):
     first_row = next(reader)
     owner = first_row[0]
     repo = first_row[1]
-    # file = open(f'/data/zy/pythonProject/CVEKnowledgeMap/output/CVE-2020-9548/same_patch.csv', "r")
+    # file = open(f'../pythonProject/CVEKnowledgeMap/output/CVE-2020-9548/same_patch.csv', "r")
 
     reader = csv.reader(file)
 
@@ -319,7 +319,7 @@ def build_pipeline(file,folder):
     first_row = next(reader)
     owner = first_row[0]
     repo = first_row[1]
-    # file = open(f'/data/zy/pythonProject/CVEKnowledgeMap/output/CVE-2020-9548/same_patch.csv', "r")
+    # file = open(f'../pythonProject/CVEKnowledgeMap/output/CVE-2020-9548/same_patch.csv', "r")
 
     reader = csv.reader(file)
 
@@ -370,7 +370,7 @@ if __name__ == '__main__':
     #         folders.remove(folder)
 
 
-    c = read_cve_file('/data/zy/pythonProject/CVEKnowledgeMap/resource/FinaltestCve.txt')
+    c = read_cve_file('../pythonProject/CVEKnowledgeMap/resource/FinaltestCve.txt')
     c = list(c)
     c = sorted(c)
     get_commits_files(c)
