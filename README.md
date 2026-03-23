@@ -45,8 +45,36 @@ cd vulnerability-patch-detector
 
 # Install dependencies
 pip install -r requirements.txt
-
 ```
+
+## Configuration
+
+This project requires API keys for GitHub and OpenAI. Set the following environment variables before running:
+
+**Linux / macOS**
+```bash
+export GITHUB_TOKEN="your_github_personal_access_token"
+export OPENAI_API_KEY="your_openai_api_key"
+```
+
+**Windows (Command Prompt)**
+```cmd
+set GITHUB_TOKEN=your_github_personal_access_token
+set OPENAI_API_KEY=your_openai_api_key
+```
+
+**Windows (PowerShell)**
+```powershell
+$env:GITHUB_TOKEN="your_github_personal_access_token"
+$env:OPENAI_API_KEY="your_openai_api_key"
+```
+
+> You can also create a `.env` file in the project root and load it with [python-dotenv](https://github.com/theskumar/python-dotenv).
+
+| Variable | Description |
+|----------|-------------|
+| `GITHUB_TOKEN` | GitHub Personal Access Token for accessing the GitHub API |
+| `OPENAI_API_KEY` | OpenAI API key for GPT-4o-mini access |
 
 ## Dependencies
 

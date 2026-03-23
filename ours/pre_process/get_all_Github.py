@@ -1,3 +1,4 @@
+import os
 import threading
 
 import requests
@@ -7,8 +8,8 @@ import datetime
 
 results = []
 # Github API token
-TOKEN = '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'
-# ToKEN = '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'
+TOKEN = os.environ.get("GITHUB_TOKEN", "")
+# ToKEN = os.environ.get("GITHUB_TOKEN", "")
 # Github API URL
 URL = 'https://api.github.com/search/repositories'
 

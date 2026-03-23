@@ -66,7 +66,7 @@ main_language = ["C++", "C", "Java", "Python", "JavaScript", "Go"]
 # tag = 0
 # lock = threading.Lock()
 
-token = "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"
+token = os.environ.get("GITHUB_TOKEN", "")
 dict = {}
 
 

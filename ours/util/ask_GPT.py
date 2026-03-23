@@ -1,3 +1,4 @@
+import os
 from datetime import time
 
 import openai
@@ -9,7 +10,7 @@ def ask_gpt_turbo(prompt):
     max_retries = 5  # 设置最大重试次数
     retries = 0  # 记录当前重试次数
 
-    openai.api_key = "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"
+    openai.api_key = os.environ.get("OPENAI_API_KEY", "")
     rsp = openai.ChatCompletion.create(
         model="gpt-4o-mini",
         messages=[

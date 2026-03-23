@@ -55,7 +55,7 @@ def get_commit_created_at(commit_url):
     # api_url = f"https://api.github.com/repos/{owner}/{name}/commits/{sha}"
     api_url = commit_url.replace("github.com", "api.github.com/repos").replace("/commit/", "/commits/")
     headers = {
-        "Authorization": "bearer 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",
+        "Authorization": f"bearer {os.environ.get('GITHUB_TOKEN', '')}",
         "Content-Type": "application/json"
     }
     if commit_url.find("/pull/") != -1:
@@ -80,7 +80,7 @@ def get_github_issue_create_time(url):
     print("github issue url")
     # 定义请求头，需要提供GitHub的个人访问令牌
     headers = {
-        "Authorization": "bearer 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",
+        "Authorization": f"bearer {os.environ.get('GITHUB_TOKEN', '')}",
         "Content-Type": "application/json"
     }
     request_url = url.replace("github.com", "api.github.com/repos")
@@ -106,7 +106,7 @@ def get_github_pull_time(url):
     api_url = url.replace("github.com", "api.github.com/repos").replace("pull", "pulls")
     # api_url = f'https://api.github.com/repos/ipython/ipython/pulls/8429'
     headers = {
-        "Authorization": "bearer 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",
+        "Authorization": f"bearer {os.environ.get('GITHUB_TOKEN', '')}",
         "Content-Type": "application/json"
     }
     # 发送GET请求，获取pull request的信息

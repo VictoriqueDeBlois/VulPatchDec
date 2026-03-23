@@ -12,7 +12,7 @@ from check_data import read_cve_file
 from util.cve_parser import get_cve_description
 # from util.tool import get_numbers_with_hash, check_cve, check_pr, get_numbers_with_answer
 
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY", "")
 
 
 def make_prompt(cveid, description, commits, patch_commits_messages, cve_issue, cve_pr):

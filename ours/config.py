@@ -50,7 +50,7 @@ LOG_PATH = CURRENT_DIR + 'log/'
 #todo 测试100个
 ANSWER_PATH = CURRENT_DIR + 'answer/'
 ANSWER_PATH2 = CURRENT_DIR + 'answer2/'
-token = "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"
+token = os.environ.get("GITHUB_TOKEN", "")
 #存放补丁结果的路径
 RESULT_PATH = CURRENT_DIR + 'result/'
 PIPILINE_PATH = '../pythonProject/CVEKnowledgeMap/pipeline/'

@@ -1,3 +1,4 @@
+import os
 import requests
 import re
 
@@ -124,7 +125,7 @@ if __name__ == "__main__":
 
     # 示例2: 使用访问令牌（推荐）
     # 需要在GitHub设置中生成个人访问令牌
-    token = "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"
+    token = os.environ.get("GITHUB_TOKEN", "")
     # result = get_repo_main_language(repo_url, token=token)
     # print_language_info(result)
 
